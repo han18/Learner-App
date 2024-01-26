@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { learnerData } from "./data/learnerData";
+import { useState } from "react";
+import "./App.css";
+import Learner from "./Components/Learner";
 
 function App() {
+  const [learners, setLearners] = useState(learnerData);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Learner Data:</h1>
+
+      {learners.map((learner) => (
+        <h2 key={learner.id}>
+          Name: {learner.name}
+          <br></br>
+          Bio: {learner.bio}
+          Scores: {learner.scores.data}
+        </h2>
+      ))}
+      {learners.scores.data.map((learner, next) => {
+        <h key={next}>Scores: {learner}</h>;
+      })}
     </div>
   );
 }
