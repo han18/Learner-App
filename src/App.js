@@ -1,7 +1,7 @@
 import { learnerData } from "./data/learnerData";
 import { useState } from "react";
 import "./App.css";
-import LearnerComponent from "./Components/Learner";
+import LearnerComponent from "./Components/LearnerComponent";
 
 function App() {
   const [learners, setLearners] = useState(learnerData);
