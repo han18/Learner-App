@@ -1,3 +1,5 @@
+import Score from "./Score";
+
 const LearnerComponent = (props) => {
   const learners = props.learners;
   return (
@@ -10,7 +12,7 @@ const LearnerComponent = (props) => {
           <ul>
             {learner.scores.map((score, index) => (
               <li key={index}>
-                Date: {score.date}, Score: {score.score}
+                <Score score={score} />
               </li>
             ))}
           </ul>

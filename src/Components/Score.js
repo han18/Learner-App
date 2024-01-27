@@ -1,6 +1,10 @@
 function Score(props) {
-  const scores = props.scores;
-  return <div></div>;
+  const score = props.score;
+  return (
+    <div>
+      Date: {score.date}, Score: {score.score}
+    </div>
+  );
 }
 
 export default Score;

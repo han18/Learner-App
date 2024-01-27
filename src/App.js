@@ -7,7 +7,7 @@ function App() {
   const [learners, setLearners] = useState(learnerData);
 
   return (
-    <div>
+    <div className="body">
       <h1>Learner Data:</h1>
       <LearnerComponent learners={learners} />
     </div>
