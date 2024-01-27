@@ -1,5 +1,22 @@
 .body {
   border: 2px solid blue;
   width: 900px;
-  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 15px;
+}
+
+h1 {
+  color: gray;
+  margin: 15px;
+}
+
+h2 {
+  color: brown;
+  margin: 10px;
+}
+
+p {
+  color: rgb(67, 39, 39);
+  font-family: "Courier New", Courier, monospace;
+  margin: 15px;
 }
