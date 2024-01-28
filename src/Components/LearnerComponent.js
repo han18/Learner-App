@@ -1,14 +1,14 @@
 import Score from "./Score";
 
 const LearnerComponent = (props) => {
-  const learners = props.learners;
+  const learners = props.learners; //
   return (
     <div>
       {learners.map((learner) => (
         <div key={learner.id}>
           <h2>{learner.name}</h2>
           <p>{learner.bio}</p>
-          <h3>Scores:</h3>
+          <h3>Learner Scores:</h3>
           <ul>
             {learner.scores.map((score, index) => (
               <li key={index}>

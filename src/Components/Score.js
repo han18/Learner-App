@@ -1,8 +1,10 @@
 function Score(props) {
-  const score = props.score;
+  const scoreData = props.score;
   return (
     <div>
-      Date: {score.date}, Score: {score.score}
+      <h3>
+        Date: {scoreData.date}, <br></br>Score: {scoreData.score}
+      </h3>
     </div>
   );
 }
