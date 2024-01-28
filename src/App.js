@@ -4,6 +4,7 @@ import "./App.css";
 import LearnerComponent from "./Components/LearnerComponent";
 
 function App() {
+  // creating the state
   const [learners, setLearners] = useState(learnerData);
 
   return (
