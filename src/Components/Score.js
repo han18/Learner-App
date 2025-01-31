@@ -10,5 +10,3 @@ function Score(props) {
 }
 
 export default Score;
-
-// must import to the learner page

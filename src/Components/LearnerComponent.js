@@ -1,7 +1,18 @@
 import Score from "./Score";
+import CreateLearnerForm from "./CreateLearnerForm";
+import { useContext } from "react";
+import { NameTheme } from "../Context/NameTheme";
 
 const LearnerComponent = (props) => {
-  const learners = props.learners; //
+  const learners = props.learners;
+  const newName = useContext(NameTheme);
+
+  const handleDelete = (learnerId) => {
+    // Call the onDeleteLearner function passed as a prop
+    if (props.onDeleteLearner) {
+      props.onDeleteLearner(learnerId);
+    }
+  };
   return (
     <div>
       {learners.map((learner) => (
@@ -16,6 +27,10 @@ const LearnerComponent = (props) => {
               </li>
             ))}
           </ul>
+          <button onClick={() => handleDelete(learner.name)}>
+            Delete Learner
+          </button>
+          <p>{`Hello ${newName}`}</p>
         </div>
       ))}
     </div>
